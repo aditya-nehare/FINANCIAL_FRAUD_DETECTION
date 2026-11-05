@@ -1,0 +1,16 @@
+{
+  "name": "financial_fraud_detection",
+  "version": "1.0.0",
+  "description": "real-time financial fraud detection system engineered to intercept complex cybercrime topologies, such as synthetic identity networks and multi-node collusion rings, which traditional rule-based perimeters consistently overlook. The system is designed to secure high-dimensional digital payment gateways without introducing latency friction to the legitimate consumer checkout experience",
+  "license": "ISC",
+  "author": "Aditya Nehare",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "nodemon": "^3.1.14"
+  }
+}
