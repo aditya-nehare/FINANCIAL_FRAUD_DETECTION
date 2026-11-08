@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Create Account — FinGuard</title>
+
+    <link rel="stylesheet" href="/css/signup.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="page">
+      <!-- NAVIGATION -->
+
+      <header class="navbar">
+        <a href="/" class="brand">finguard.</a>
+
+        <div class="nav-right">
+          <span>ALREADY REGISTERED?</span>
+          <a href="/login" class="login-btn"> Log in ↗ </a>
+        </div>
+      </header>
+
+      <!-- INTRODUCTION -->
+
+      <section class="intro">
+        <div class="intro-left">
+          <h1>
+            CREATE YOUR<br />
+            <span>ACCOUNT.</span>
+          </h1>
+        </div>
+
+        <div class="intro-right">
+          <h2>
+            Financial security<br />
+            starts with you.
+          </h2>
+
+          <p>
+            Join FinGuard and experience intelligent financial fraud detection.
+            Create your account to get started.
+          </p>
+        </div>
+      </section>
+
+      <!-- SIGNUP FORM -->
+
+      <section class="signup-section">
+        <form action="/signup" method="POST" id="signupForm">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="fullname">FULL NAME *</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="email">EMAIL ADDRESS *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="phone">PHONE NUMBER *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 00000 00000"
+                autocomplete="tel"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="password">PASSWORD *</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Minimum 8 characters"
+                minlength="8"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-bottom">
+            <div class="terms">
+              <input type="checkbox" id="terms" required />
+
+              <label for="terms">
+                I agree to the
+                <a href="/terms">Terms & Conditions</a>
+                and
+                <a href="/privacy">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              CREATE ACCOUNT <span>↗</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- LARGE TYPOGRAPHY -->
+
+      <section class="bottom-heading">
+        <span>DETECT. PREVENT. PROTECT.</span>
+        <h2>finguard.</h2>
+      </section>
+
+      <footer>
+        <span>FINGUARD © 2026</span>
+        <span>BUILT FOR FINANCIAL TRUST.</span>
+      </footer>
+    </main>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            event.preventDefault();
+            alert("Passwords do not match!");
+          }
+        });
+    </script>
+  </body>
+</html>
